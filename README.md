@@ -24,7 +24,21 @@ Or install it yourself as:
     a.to_s
     => "http://www.nytimes.com/"
 
-See [tests](spec/cannonball_spec.rb) for more information
+See [tests](spec/cannonball_spec.rb) for more information.
+
+### Removing suspicious useless params from a query string
+
+Configure the gem:
+
+    Cannonball::configure do |config|
+      config.should_test_possible_duplicate_uri = true # enable remote test of uris containing suspicious paramaters (false by default)
+      config.should_cache = true # enable caching using Redis (recommanded)
+      config.redis = Redis.new # a redis instance
+    end
+
+    a = Cannonball::URI.new('http://online.wsj.com/article/SB10001424127887324767004578487332636180800.html?mod=trending_now_1').to_s
+    => "http://online.wsj.com/article/SB10001424127887324767004578487332636180800.html"
+
 
 ## Contributing
 

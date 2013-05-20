@@ -14,7 +14,7 @@ module Cannonball
   @@config = OpenStruct.new({
     should_test_possible_duplicate_uri: false,
     useragent: 'Cannonball/1.0',
-    should_cache: false,
+    should_cache: true,
     redis: nil,
     redis_namespace: 'Cannonball'
   })
