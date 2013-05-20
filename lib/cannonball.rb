@@ -12,9 +12,9 @@ require 'redis/namespace'
 module Cannonball
 
   @@config = OpenStruct.new({
-    should_test_possible_duplicate_uri: true,
+    should_test_possible_duplicate_uri: false,
     useragent: 'Cannonball/1.0',
-    should_cache: true,
+    should_cache: false,
     redis: nil,
     redis_namespace: 'Cannonball'
   })
