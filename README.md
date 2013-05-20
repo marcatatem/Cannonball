@@ -29,7 +29,8 @@ See [tests](spec/cannonball_spec.rb) for more information.
 ### Removing potentialy useless params from a query string
 
 Configure the gem:
-    ```ruby
+
+```ruby
     Cannonball::configure do |config|
       config.should_test_possible_duplicate_uri = true # enable remote test of uris containing potentialy useless paramaters (false by default)
       config.should_cache = true # enable caching using Redis (recommanded)
@@ -38,7 +39,7 @@ Configure the gem:
 
     a = Cannonball::URI.new('http://online.wsj.com/article/SB10001424127887324767004578487332636180800.html?mod=trending_now_1').to_s
     => "http://online.wsj.com/article/SB10001424127887324767004578487332636180800.html"
-    ```
+```
 
 ## Contributing
 
