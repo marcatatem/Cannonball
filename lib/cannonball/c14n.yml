@@ -1,0 +1,62 @@
+directory_index:
+  - index.html
+  - index.htm
+  - index.php
+
+useless_params:
+  # this list was build from PostRank-uri gem c18n file
+  # https://github.com/postrank-labs/postrank-uri/blob/master/lib/postrank-uri/c18n.yml
+  - utm_source    # Google Analytics: campaign source
+  - utm_medium    # Google Analytics: campaign medium
+  - utm_term      # Google Anlaytics: campaign term
+  - utm_content   # Google Analytics: campaign content
+  - utm_campaign  # Google Analytics: campaign name
+  - sms_ss        # addthis.com tracker
+  - awesm         # awe.sm tracker
+  - xtor          # AT Internet tracker
+  - PHPSESSIONID
+
+suspicious_params:
+  - _r
+  - _vl_backlink
+  - camp
+  - campaign
+  - cm_ven
+  - creative
+  - creativeASIN
+  - csp
+  - csp
+  - emc
+  - eref
+  - feature
+  - from
+  - fsrc
+  - hp
+  - ie
+  - iid
+  - intcid
+  - INTCMP
+  - linkCode
+  - maca
+  - mod
+  - nav
+  - nucrss
+  - or
+  - pagewanted
+  - part
+  - partner
+  - ref
+  - rss
+  - sdsrc
+  - sessionid
+  - sid
+  - source
+  - spt
+  - src
+  - subj
+  - tag
+  - track
+  - utm_hp_ref
+  - vid
+  - wprss
+  - wtmc
