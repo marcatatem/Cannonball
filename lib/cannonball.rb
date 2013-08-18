@@ -87,7 +87,7 @@ module Cannonball
     end
 
     def subdomain
-      @_subdomain ||= @_uri.host.nil? ? nil : PublicSuffix.parse(Addressable::IDNA.to_unicode(@_uri.host)).subdomain
+      @_subdomain ||= @_uri.host.nil? ? nil : ( PublicSuffix.parse(Addressable::IDNA.to_unicode(@_uri.host)).subdomain || @_uri.host )
     end
 
     def display_url
