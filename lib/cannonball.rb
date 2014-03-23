@@ -55,7 +55,7 @@ module Cannonball
   end
 
   class URI
-    
+
     attr_accessor :_uri, :_domain, :_subdomain
 
     def initialize uri, base_uri = nil
@@ -87,7 +87,7 @@ module Cannonball
     end
 
     def subdomain
-      @_subdomain ||= @_uri.host.nil? ? nil : ( PublicSuffix.parse(Addressable::IDNA.to_unicode(@_uri.host)).subdomain || @_uri.host )
+      @_subdomain ||= @_uri.host.nil? ? nil : ( PublicSuffix.parse(Addressable::IDNA.to_unicode(@_uri.host)).trd || @_uri.host )
     end
 
     def display_url
@@ -137,7 +137,7 @@ module Cannonball
         unless @_uri.query_values.nil?
           @_uri.query_values = @_uri.query_values.sort # sort query parameters
           @_uri.query_values = @_uri.query_values.delete_if{ |k,v| C14N['useless_params'].include?(k) } # remove useless query parameters
-        end        
+        end
 
         # remove fragments altogether
         @_uri.fragment = nil

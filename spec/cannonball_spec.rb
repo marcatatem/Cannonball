@@ -63,7 +63,7 @@ describe Cannonball::URI do
 
   it "should keep custom ports" do
     Cannonball::URI.new('http://www.example.com:8080/bar.html').to_s.should eq('http://www.example.com:8080/bar.html')
-  end  
+  end
 
   it "should remove dot-segments" do
     Cannonball::URI.new('http://www.example.com/../a/b/../c/./d.html').to_s.should eq('http://www.example.com/a/c/d.html')
@@ -104,8 +104,8 @@ describe Cannonball::URI do
   end
 
   it "should guess subdomain" do
-    Cannonball::URI.new('http://www.example.com/news').subdomain.should eq('www.example.com')
-    Cannonball::URI.new('http://iro.example.co.uk/news').subdomain.should eq('iro.example.co.uk')
+    Cannonball::URI.new('http://www.example.com/news').subdomain.should eq('www')
+    Cannonball::URI.new('http://iro.example.co.uk/news').subdomain.should eq('iro')
   end
 
   it "should guess root domain" do
