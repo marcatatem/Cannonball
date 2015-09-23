@@ -21,8 +21,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "addressable",      "~> 2.3.4"
   spec.add_dependency "public_suffix",    "~> 1.3.0"
   spec.add_dependency "ethon",            "~> 0.5.12"
-  spec.add_dependency "redis",            "~> 3.0.4"
-  spec.add_dependency "redis-namespace",  "~> 1.3.0"
+  spec.add_dependency "redis",            "~> 3.2.1"
+  spec.add_dependency "redis-namespace",  "~> 1.5.2"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
